@@ -21,6 +21,8 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
     "@tanstack/eslint-plugin-query": "^5.28.11",
     "@types/node": "^20",
     "@types/react": "^18",
