@@ -31,3 +31,15 @@ body {
     text-wrap: balance;
   }
 }
+
+.debug {
+  border: 4px solid red !important;
+}
+
+.debug2 {
+  border: 4px solid yellow;
+}
+
+.debug3 {
+  border: 4px solid green;
+}
