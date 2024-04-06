@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 
-import './globals.css';
+import '../style/globals.css';
+import '../style/reset.css';
 
 import Header from '@/components/Header';
 
