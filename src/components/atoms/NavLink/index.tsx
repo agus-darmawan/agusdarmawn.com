@@ -1,4 +1,5 @@
 'use client';
+import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
@@ -15,11 +16,10 @@ const NavLinks: FC<NavLinkProps> = ({ label, href }) => {
   return (
     <Link
       href={href}
-      className={
-        isActive
-          ? 'text-blue-500 popins text-lg font-semibold'
-          : 'text-white popins text-lg font-semibold'
-      }
+      className={clsx(
+        'popins text-sm md:text-lg md:font-semibold',
+        isActive ? 'text-blue-500' : 'text-white ',
+      )}
     >
       {label}
     </Link>
