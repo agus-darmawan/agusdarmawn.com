@@ -1,13 +1,9 @@
-import * as React from 'react';
+import { FC } from 'react';
 
-import HeroSection from '@/containers/home-page/HeroSection';
-
-interface IHomePageProps {}
-
-const HomePage: React.FunctionComponent<IHomePageProps> = () => {
+const HomePage: FC = () => {
   return (
-    <main className='min-w-full bg-white min-h-screen'>
-      <HeroSection />
+    <main className='min-w-full bg-white dark:bg-slate-500 min-h-screen'>
+      <div className='min-h-[300vh]'></div>
     </main>
   );
 };

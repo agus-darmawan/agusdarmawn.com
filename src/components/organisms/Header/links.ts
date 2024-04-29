@@ -1,9 +1,9 @@
-type Link = {
+export type Link = {
   label: string;
   href: string;
 };
 
-type Links = Link[];
+export type Links = Link[];
 
 export const links: Links = [
   {

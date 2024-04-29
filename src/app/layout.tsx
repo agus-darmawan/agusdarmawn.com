@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
+import { ThemeProvider } from 'next-themes';
+import { ReactNode } from 'react';
 
 import '../style/globals.css';
 import '../style/reset.css';
 
-import Header from '@/components/Header';
+import { Header } from '@/components';
 
 const inter = Inter({ subsets: ['latin'] });
 const popins = Poppins({
@@ -20,13 +22,15 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang='en'>
       <body className={`${inter.className} ${popins.className}`}>
-        <Header />
-        {children}
+        <ThemeProvider attribute='class'>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

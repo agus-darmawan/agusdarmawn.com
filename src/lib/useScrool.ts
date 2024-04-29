@@ -12,11 +12,9 @@ const useScroll = () => {
       const newScrollPercentage = (currentScroll / scrollHeight) * 100;
       setScrollPercentage(newScrollPercentage);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   return scrollPercentage;
 };
 
