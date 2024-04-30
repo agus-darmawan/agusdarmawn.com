@@ -1,15 +1,18 @@
 'use client';
 import clsx from 'clsx';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import useScroll from '@/lib/useScrool';
 
 import { NavLinks } from '@/components/atoms';
 import ThemeButton from '@/components/molecules/ThemeButton';
 
+import Hamburger from './Hamburger';
 import { links } from './links';
+import MobileNavbar from './MobileNavbar';
 
 const Header: FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const scrollPercentage: number = useScroll();
 
   return (
@@ -22,15 +25,19 @@ const Header: FC = () => {
       ></div>
       <nav
         className={clsx(
-          'px-4 lg:px-32 md:px-20 w-full md:h-[72px] h-[54px]',
-          'flex flex-row md:gap-10 gap-3 items-center',
+          'px-10 lg:px-32 md:px-20 w-full md:h-14 h-12',
+          'flex flex-row items-center',
         )}
       >
-        {links.map((value, index) => (
-          <NavLinks key={index} label={value.label} href={value.href} />
-        ))}
-        <ThemeButton className='md:ml-auto ml-3' />
+        <Hamburger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+        <ul className='hidden md:flex flex-row gap-10'>
+          {links.map((value, index) => (
+            <NavLinks key={index} label={value.label} href={value.href} />
+          ))}
+        </ul>
+        <ThemeButton className='ml-auto' />
       </nav>
+      <MobileNavbar isOpen={isOpen} />
     </header>
   );
 };

@@ -3,7 +3,7 @@ export type Link = {
   href: string;
 };
 
-export type Links = Link[];
+export type Links = Array<Link>;
 
 export const links: Links = [
   {

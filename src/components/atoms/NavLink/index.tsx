@@ -4,12 +4,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
-type NavLinkProps = {
+interface INavLinkProps {
   label: string;
   href: string;
-};
+}
 
-const NavLinks: FC<NavLinkProps> = ({ label, href }) => {
+const NavLinks: FC<INavLinkProps> = ({ label, href }) => {
   const route: string = usePathname();
   const isActive = href === '/' ? route === '/' : route.includes(href);
 
