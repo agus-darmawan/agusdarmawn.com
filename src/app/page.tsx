@@ -4,7 +4,7 @@ import { AboutHomePage, HeroHomePage } from '@/components';
 
 const HomePage: FC = () => {
   return (
-    <main className='bg-dark'>
+    <main>
       <HeroHomePage />
       <AboutHomePage />
     </main>
