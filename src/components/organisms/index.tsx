@@ -1,3 +1,6 @@
 import Header from './Header';
+import Hamburger from './Header/Hamburger';
+import MobileNavbar from './Header/MobileNavbar';
+import Tabs from './Tabs';
 
-export { Header };
+export { Hamburger, Header, MobileNavbar, Tabs };

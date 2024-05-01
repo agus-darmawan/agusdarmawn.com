@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
-import { NavLinks } from '@/components/atoms';
+import { NavLinks } from '@/components';
 
 import { links } from '../links';
 

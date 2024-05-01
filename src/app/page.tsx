@@ -1,11 +1,12 @@
 import { FC } from 'react';
 
-import { HeroHomePage } from '@/components';
+import { AboutHomePage, HeroHomePage } from '@/components';
 
 const HomePage: FC = () => {
   return (
-    <main>
+    <main className='bg-dark'>
       <HeroHomePage />
+      <AboutHomePage />
     </main>
   );
 };

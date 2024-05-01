@@ -1,3 +1,3 @@
+import IconList from './IconList';
 import ThemeButton from './ThemeButton';
-
-export { ThemeButton };
+export { IconList, ThemeButton };

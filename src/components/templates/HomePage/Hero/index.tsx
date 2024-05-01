@@ -4,7 +4,12 @@ import { FC } from 'react';
 
 const HeroHomePage: FC = () => {
   return (
-    <section className='flex flex-col lg:flex-row  justify-center h-screen '>
+    <section
+      className={clsx(
+        'flex flex-col lg:flex-row lg:justify-start justify-center',
+        'h-screen relative overflow-hidden',
+      )}
+    >
       <div
         className={clsx(
           'flex flex-col justify-center',
