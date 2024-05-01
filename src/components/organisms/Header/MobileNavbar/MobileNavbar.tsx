@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 import { NavLinks } from '@/components/atoms';
 
-import { links } from './links';
+import { links } from '../links';
 
 interface IMobileNavbarProps {
   isOpen: boolean;

@@ -1,9 +1,11 @@
 import { FC } from 'react';
 
+import { HeroHomePage } from '@/components';
+
 const HomePage: FC = () => {
   return (
-    <main className='min-w-full bg-white dark:bg-slate-500 min-h-screen'>
-      <div className='min-h-[300vh]'></div>
+    <main>
+      <HeroHomePage />
     </main>
   );
 };

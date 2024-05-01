@@ -25,7 +25,7 @@ const Header: FC = () => {
       ></div>
       <nav
         className={clsx(
-          'px-10 lg:px-32 md:px-20 w-full md:h-14 h-12',
+          'px-10 lg:px-36 md:px-20 w-full md:h-14 h-12',
           'flex flex-row items-center',
         )}
       >
