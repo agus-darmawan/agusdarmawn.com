@@ -6,7 +6,7 @@ import useScroll from '@/lib/useScrool';
 
 import { Hamburger, MobileNavbar, NavLinks, ThemeButton } from '@/components';
 
-import { links } from './links';
+import { navlinks } from './links';
 
 const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,13 +28,13 @@ const Header: FC = () => {
       >
         <Hamburger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
         <ul className='hidden md:flex flex-row gap-10'>
-          {links.map((value, index) => (
+          {navlinks.map((value, index) => (
             <NavLinks key={index} label={value.label} href={value.href} />
           ))}
         </ul>
         <ThemeButton className='ml-auto' />
       </nav>
-      <MobileNavbar isOpen={isOpen} />
+      <MobileNavbar isOpen={isOpen} links={navlinks} />
     </header>
   );
 };

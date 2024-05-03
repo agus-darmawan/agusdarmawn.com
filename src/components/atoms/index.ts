@@ -1,7 +1,8 @@
 import GradientText from './GradientText';
+import Hamburger from './Hamburger';
+import Links from './Links';
 import NavLinks from './NavLink';
+import NextImage from './NextImages';
 import SkilIcon from './SkilIcon';
-import TabsBody from './TabsBody';
-import TabsHead from './TabsHead';
 
-export { GradientText, NavLinks, SkilIcon, TabsBody, TabsHead };
+export { GradientText, Hamburger, Links, NavLinks, NextImage, SkilIcon };

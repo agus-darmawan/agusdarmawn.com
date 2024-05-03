@@ -1,11 +1,5 @@
-export type Link = {
-  label: string;
-  href: string;
-};
-
-export type Links = Array<Link>;
-
-export const links: Links = [
+import { IListLinks } from '@/interfaces/links';
+export const navlinks: IListLinks = [
   {
     label: 'Home',
     href: '/',

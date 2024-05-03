@@ -4,13 +4,14 @@ import { FC } from 'react';
 
 import { NavLinks } from '@/components';
 
-import { links } from '../links';
+import { IListLinks } from '@/interfaces/links';
 
 interface IMobileNavbarProps {
   isOpen: boolean;
+  links: IListLinks;
 }
 
-const MobileNavbar: FC<IMobileNavbarProps> = ({ isOpen }) => {
+const MobileNavbar: FC<IMobileNavbarProps> = ({ isOpen, links }) => {
   const route: string = usePathname();
   return (
     <ul className={isOpen ? 'flex flex-col mt-2 h-full mb-2' : 'hidden'}>

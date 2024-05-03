@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 import { FC, ReactNode, useState } from 'react';
 
-import { GradientText, TabsBody, TabsHead } from '@/components/atoms';
+import { GradientText, TabsBody, TabsHead } from '@/components';
 
 interface ITabsProps {
   title: string;
