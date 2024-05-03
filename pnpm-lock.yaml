@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@feedback-fish/react':
+    specifier: ^1.2.2
+    version: 1.2.2(react@18.2.0)
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
@@ -23,6 +26,9 @@ dependencies:
   react-icons:
     specifier: ^5.1.0
     version: 5.1.0(react@18.2.0)
+  react-tippy:
+    specifier: ^1.4.0
+    version: 1.4.0
   zustand:
     specifier: ^4.5.2
     version: 4.5.2(@types/react@18.2.74)(react@18.2.0)
@@ -413,6 +419,18 @@ packages:
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
     dev: true
+
+  /@feedback-fish/react@1.2.2(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-T6VxMM8nNsD3b5ulVsrcvcrNDAc4d73RLYK8Iw+6PFPIdMU2I/mOiuAHvfGauBVIWYHflja4VOdjm3z4CtlvYQ==,
+      }
+    engines: { node: '>=10.16.0' }
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@humanwhocodes/config-array@0.11.14:
     resolution:
@@ -4313,6 +4331,14 @@ packages:
     engines: { node: '>= 6' }
     dev: true
 
+  /popper.js@1.16.1:
+    resolution:
+      {
+        integrity: sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==,
+      }
+    deprecated: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
+    dev: false
+
   /possible-typed-array-names@1.0.0:
     resolution:
       {
@@ -4555,6 +4581,15 @@ packages:
         integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
       }
     dev: true
+
+  /react-tippy@1.4.0:
+    resolution:
+      {
+        integrity: sha512-r/hM5XK9Ztr2ZY7IWKuRmISTlUPS/R6ddz6PO2EuxCgW+4JBcGZRPU06XcVPRDCOIiio8ryBQFrXMhFMhsuaHA==,
+      }
+    dependencies:
+      popper.js: 1.16.1
+    dev: false
 
   /react@18.2.0:
     resolution:

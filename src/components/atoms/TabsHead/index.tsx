@@ -14,7 +14,7 @@ const TabsHead: FC<ITabsHeadProps> = ({ tabs, activeTab, onClick }) => {
         <li
           key={index}
           className={clsx(
-            tab === activeTab ? 'text-violet-500 ' : 'text-zinc-100',
+            tab === activeTab ? 'text-violet-500 ' : '',
             'cursor-pointer md:text-lg text-xs hover:text-violet-400',
           )}
           onClick={() => onClick(tab)}

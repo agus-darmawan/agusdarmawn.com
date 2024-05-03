@@ -37,7 +37,7 @@ const HeroHomePage: FC = () => {
         </p>
       </div>
       <Image
-        src='/assets/img/home-page/hero-vector.svg'
+        src='/img/home-page/hero-vector.svg'
         height={600}
         width={600}
         className='absolute lg:static -right-60 bottom-0 -z-10'
