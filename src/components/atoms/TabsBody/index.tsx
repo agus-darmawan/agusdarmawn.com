@@ -7,7 +7,7 @@ interface ITabsBodyProps {
 
 const TabsBody: FC<ITabsBodyProps> = ({ tabs, activeTab }) => {
   return (
-    <ul className='flex justify-center md:py-3 flex-wrap px-10'>
+    <ul className='flex justify-center md:py-3 flex-wrap'>
       {tabs.map(({ title, content }, index) => (
         <li
           key={index}

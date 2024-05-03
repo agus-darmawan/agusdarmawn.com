@@ -47,8 +47,8 @@ const tabsData = [
 
 const SkillsTabs: FC = () => {
   return (
-    <section title='skil-tabs-about'>
-      <Tabs title='What can I do?' tabs={tabsData} />;
+    <section title='my-skill' className='px-10 md:px-20 lg:px-40'>
+      <Tabs title='What can I do?' tabs={tabsData} />
     </section>
   );
 };

@@ -7,6 +7,7 @@ import { GradientText } from '@/components';
 const IntroductionAbout: FC = () => {
   return (
     <section
+      title='my-introduction'
       className={clsx(
         'flex flex-col justify-center',
         'px-10 md:px-20 lg:px-40 md:pt-36 pt-20',

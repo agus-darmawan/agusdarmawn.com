@@ -1,12 +1,13 @@
 import { FC } from 'react';
 
-import { IntroductionAbout, SkillsTabs } from '@/components';
+import { IntroductionAbout, MyStatistics, SkillsTabs } from '@/components';
 
 const AboutPage: FC = () => {
   return (
-    <main>
+    <main title='about-page'>
       <IntroductionAbout />
       <SkillsTabs />
+      <MyStatistics />
     </main>
   );
 };
