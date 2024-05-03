@@ -21,9 +21,10 @@ const TabsHead: FC<ITabsHeadProps> = ({ tabs, activeTab, onClick }) => {
         >
           {tab}
           <div
-            className={
-              tab === activeTab ? 'bg-violet-500 h-0.5 w-[70%] mx-auto' : ''
-            }
+            className={clsx(
+              'bg-violet-500 h-0.5 w-[70%] mx-auto',
+              tab === activeTab ? 'block' : 'hidden hover:block',
+            )}
           ></div>
         </li>
       ))}

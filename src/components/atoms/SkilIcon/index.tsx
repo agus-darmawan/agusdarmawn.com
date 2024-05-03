@@ -20,7 +20,7 @@ const SkillIcon: FC<ISkillIcon> = ({ icon }) => {
         height={70}
         width={70}
         alt={icon}
-        className='mx-2 lg:h-20 md:h-14 h-10'
+        className='mx-2 lg:h-20 md:h-14 h-8'
       />
     </figure>
   );

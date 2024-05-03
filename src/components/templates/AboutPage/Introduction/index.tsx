@@ -9,7 +9,7 @@ const IntroductionAbout: FC = () => {
     <section
       className={clsx(
         'flex flex-col justify-center',
-        'px-10 md:px-20 lg:px-40 pt-36',
+        'px-10 md:px-20 lg:px-40 md:pt-36 pt-20',
       )}
     >
       <figure
@@ -29,10 +29,10 @@ const IntroductionAbout: FC = () => {
           <h2 className='font-semibold text-2xl md:text-4xl lg:text-5xl'>
             About
           </h2>
-          <h1 className='font-semibold text-3xl md:text-5xl lg:text-6xl mb-10'>
+          <h1 className='font-semibold text-3xl md:text-5xl lg:text-6xl md:mb-10 mb-5'>
             <GradientText>Agus Darmaan</GradientText>
           </h1>
-          <p className='text-sm lg:text-xl leading-relaxed'>
+          <p className='text-sm lg:text-xl md:leading-relaxed'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             architecto quas laudantium praesentium accusamus dolorum at, non
             ullam nam alias voluptatum quaerat, odio reiciendis est nobis et

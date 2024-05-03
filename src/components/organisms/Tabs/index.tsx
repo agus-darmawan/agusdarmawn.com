@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 import { FC, ReactNode, useState } from 'react';
 
-import { TabsBody, TabsHead } from '@/components/atoms';
+import { GradientText, TabsBody, TabsHead } from '@/components/atoms';
 
 interface ITabsProps {
   title: string;
@@ -23,13 +23,8 @@ const Tabs: FC<ITabsProps> = ({ title, tabs }) => {
         'flex flex-col justify-center',
       )}
     >
-      <h2
-        className={clsx(
-          'text-2xl md:text-3xl lg:text-4xl',
-          'text-center text-violet-500 font-semibold',
-        )}
-      >
-        {title}
+      <h2 className='text-2xl md:text-3xl lg:text-4xl text-center font-semibold'>
+        <GradientText>{title}</GradientText>
       </h2>
       <TabsHead
         tabs={tabs.map((tab) => tab.title)}

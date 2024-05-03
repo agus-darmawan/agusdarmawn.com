@@ -8,7 +8,7 @@ interface IIconListProps {
 
 const IconList: FC<IIconListProps> = ({ icons }) => {
   return (
-    <ul className='flex flex-row gap-4'>
+    <ul className='flex flex-row md:gap-4'>
       {icons.map((icon) => (
         <li key={icon}>
           <SkilIcon icon={icon} />

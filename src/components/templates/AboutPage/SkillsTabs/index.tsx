@@ -46,7 +46,11 @@ const tabsData = [
 ];
 
 const SkillsTabs: FC = () => {
-  return <Tabs title='What can I do?' tabs={tabsData} />;
+  return (
+    <section title='skil-tabs-about'>
+      <Tabs title='What can I do?' tabs={tabsData} />;
+    </section>
+  );
 };
 
 export default SkillsTabs;
