@@ -23,7 +23,7 @@ const Tabs: FC<ITabsProps> = ({ title, tabs }) => {
         'flex flex-col justify-center',
       )}
     >
-      <h2 className='text-2xl md:text-3xl lg:text-4xl text-center font-semibold'>
+      <h2 className='text-3xl md:text-4xl lg:text-5xl text-center font-semibold'>
         <GradientText>{title}</GradientText>
       </h2>
       <TabsHead

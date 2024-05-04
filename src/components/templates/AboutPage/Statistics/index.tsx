@@ -1,25 +1,9 @@
 import clsx from 'clsx';
 import { FC } from 'react';
 
-import { GradientText } from '@/components/atoms';
+import { GradientText } from '@/components';
 
-interface IMyStatisticsProps {}
-
-const MyStatistics: FC<IMyStatisticsProps> = () => {
-  const startData = [
-    {
-      number: '3+',
-      desc: 'Year Experience in Programming',
-    },
-    {
-      number: '6+',
-      desc: 'Work Experience',
-    },
-    {
-      number: '15+',
-      desc: 'Projects completed',
-    },
-  ];
+const MyStatistics: FC = () => {
   return (
     <section
       className='px-10 md:px-20 lg:px-40 lg:pt-20 md:pt-10 pt-8'
@@ -50,4 +34,18 @@ const MyStatistics: FC<IMyStatisticsProps> = () => {
   );
 };
 
+const startData = [
+  {
+    number: '3+',
+    desc: 'Year Experience in Programming',
+  },
+  {
+    number: '6+',
+    desc: 'Work Experience',
+  },
+  {
+    number: '15+',
+    desc: 'Projects completed',
+  },
+];
 export default MyStatistics;
