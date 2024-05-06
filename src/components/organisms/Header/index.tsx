@@ -21,12 +21,19 @@ const Header: FC = () => {
         }}
       ></div>
       <nav
+        title='main-navigation'
         className={clsx(
           'px-10 lg:px-36 md:px-20 w-full md:h-14 h-12',
           'flex flex-row items-center',
         )}
       >
-        <Hamburger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+        <Hamburger
+          className='block md:hidden'
+          toggled={isOpen}
+          size={20}
+          onToggle={() => setIsOpen(!isOpen)}
+          color='white'
+        />
         <ul className='hidden md:flex flex-row gap-10'>
           {navlinks.map((value, index) => (
             <NavLinks key={index} label={value.label} href={value.href} />

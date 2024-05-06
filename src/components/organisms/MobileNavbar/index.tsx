@@ -14,19 +14,19 @@ interface IMobileNavbarProps {
 const MobileNavbar: FC<IMobileNavbarProps> = ({ isOpen, links }) => {
   const route: string = usePathname();
   return (
-    <ul className={isOpen ? 'flex flex-col mt-2 h-full mb-2' : 'hidden'}>
+    <ul className={isOpen ? 'flex flex-col my-2 h-full' : 'hidden'}>
       {links.map(({ label, href }, index) => (
-        <li
+        <NavLinks
+          href={href}
+          label={label}
           key={index}
           className={clsx(
-            'hover:bg-gray-600/20 px-10 py-5 h-full w-full',
+            'hover:bg-gray-600/20 px-10 h-full py-5 w-full',
             (href === '/' ? route === '/' : route.includes(href))
               ? 'bg-gray-600/20'
               : '',
           )}
-        >
-          <NavLinks href={href} label={label} />
-        </li>
+        />
       ))}
     </ul>
   );

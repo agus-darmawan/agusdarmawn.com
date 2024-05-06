@@ -11,6 +11,9 @@ dependencies:
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
+  hamburger-react:
+    specifier: ^2.5.0
+    version: 2.5.0(react@18.2.0)
   next:
     specifier: 14.1.4
     version: 14.1.4(react-dom@18.2.0)(react@18.2.0)
@@ -26,6 +29,9 @@ dependencies:
   react-icons:
     specifier: ^5.1.0
     version: 5.1.0(react@18.2.0)
+  tailwind-merge:
+    specifier: ^2.3.0
+    version: 2.3.0
   zustand:
     specifier: ^4.5.2
     version: 4.5.2(@types/react@18.2.74)(react@18.2.0)
@@ -152,7 +158,6 @@ packages:
     engines: { node: '>=6.9.0' }
     dependencies:
       regenerator-runtime: 0.14.1
-    dev: true
 
   /@commitlint/cli@19.2.1(@types/node@20.12.3)(typescript@5.4.3):
     resolution:
@@ -2962,6 +2967,17 @@ packages:
       }
     dev: true
 
+  /hamburger-react@2.5.0(react@18.2.0):
+    resolution:
+      {
+        integrity: sha512-5GSXe+ucxTPJ0SkhIsPQ/PRDweZPIKya1lfahAuExx31SdheeUA4uOPfQIAirbKona8hvo79VDr5LJQzPXsdpw==,
+      }
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /has-bigints@1.0.2:
     resolution:
       {
@@ -4621,7 +4637,6 @@ packages:
       {
         integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==,
       }
-    dev: true
 
   /regexp.prototype.flags@1.5.2:
     resolution:
@@ -5133,6 +5148,15 @@ packages:
       }
     engines: { node: '>= 0.4' }
     dev: true
+
+  /tailwind-merge@2.3.0:
+    resolution:
+      {
+        integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==,
+      }
+    dependencies:
+      '@babel/runtime': 7.24.1
+    dev: false
 
   /tailwindcss@3.4.3:
     resolution:

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { SkilIcon } from '@/components';
+import { SkillIcon } from '@/components';
 
 interface IIconListProps {
   icons: Array<string>;
@@ -11,7 +11,7 @@ const IconList: FC<IIconListProps> = ({ icons }) => {
     <ul className='flex flex-row md:gap-4'>
       {icons.map((icon) => (
         <li key={icon}>
-          <SkilIcon icon={icon} />
+          <SkillIcon icon={icon} />
         </li>
       ))}
     </ul>

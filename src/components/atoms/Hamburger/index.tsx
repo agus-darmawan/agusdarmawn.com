@@ -1,22 +1,14 @@
-import clsx from 'clsx';
+import { CommonBurgerProps, Divide as HamburgerReact } from 'hamburger-react';
 import { FC } from 'react';
-import { FaBars, FaX } from 'react-icons/fa6';
 
-interface IHamburgerProps {
-  isOpen: boolean;
-  onClick: () => void;
+interface IHamburgerProps extends CommonBurgerProps {
+  className: string;
 }
 
-const Hamburger: FC<IHamburgerProps> = ({ isOpen, onClick }) => {
+const Hamburger: FC<IHamburgerProps> = ({ className, ...rest }) => {
   return (
-    <button
-      className={clsx(
-        'text-white h-10 p-2 rounded-full',
-        'hover:bg-slate-400/20 md:hidden ',
-      )}
-      onClick={onClick}
-    >
-      {isOpen ? <FaX size={20} /> : <FaBars size={20} />}
+    <button className={className}>
+      <HamburgerReact {...rest} />
     </button>
   );
 };

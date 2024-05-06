@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import {
+  Gallery,
   IntroductionAbout,
   ListExperience,
   MyStatistics,
@@ -14,6 +15,7 @@ const AboutPage: FC = () => {
       <SkillsTabs />
       <MyStatistics />
       <ListExperience />
+      <Gallery />
     </main>
   );
 };
