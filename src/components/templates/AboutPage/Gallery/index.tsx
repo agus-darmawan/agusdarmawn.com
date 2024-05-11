@@ -18,7 +18,6 @@ const Gallery: FC = () => {
           height={530}
           width={300}
           alt='My picture'
-          preview={true}
           title=' '
         />
         <CloudinaryImage
@@ -27,7 +26,6 @@ const Gallery: FC = () => {
           height={532}
           width={789}
           alt='My picture'
-          preview={false}
           title=' '
         />
         <div className='flex flex-col lg:gap-5 gap-3 row-start-1'>
@@ -37,7 +35,6 @@ const Gallery: FC = () => {
             height={258}
             width={300}
             alt='My picture'
-            preview={false}
             title=' '
           />
           <CloudinaryImage
@@ -46,7 +43,6 @@ const Gallery: FC = () => {
             height={258}
             width={300}
             alt='My picture'
-            preview={false}
             title=' '
           />
         </div>
