@@ -4,8 +4,8 @@ import { IListLinks } from '@/interfaces/links';
 
 export const footerlinks: IListLinks = [
   {
-    label: 'Docs',
-    href: '/docs',
+    label: 'Source Code',
+    href: 'https://github.com/agus-darmawan/agusdarmawn.com',
   },
   {
     label: 'Book Notes',
@@ -13,7 +13,7 @@ export const footerlinks: IListLinks = [
   },
   {
     label: 'Polywork',
-    href: '/polywork',
+    href: 'https://www.polywork.com/agus_darmawan',
   },
   {
     label: 'Statistics',
@@ -21,7 +21,7 @@ export const footerlinks: IListLinks = [
   },
   {
     label: 'Analytics',
-    href: '/analytics',
+    href: 'https://analytics.us.umami.is/share/0GKC7BUvMLua4Z1P/agusdarmawn.com',
   },
 ];
 

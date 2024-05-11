@@ -18,7 +18,7 @@ const Gallery: FC = () => {
           height={530}
           width={300}
           alt='My picture'
-          preview={false}
+          preview={true}
           title=' '
         />
         <CloudinaryImage
