@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { FC } from 'react';
 
 import {
@@ -6,6 +7,11 @@ import {
   ListExperience,
   SkillsTabs,
 } from '@/components';
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'This contain Agus Darmawan personal information',
+};
 
 const AboutPage: FC = () => {
   return (

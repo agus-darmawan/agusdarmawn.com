@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { FC, ReactNode } from 'react';
@@ -6,6 +7,37 @@ import '@/style/globals.css';
 import '@/style/reset.css';
 
 import { Footer, Header } from '@/components';
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Darmawan',
+    default: 'Homepage | Darmawan',
+  },
+  description: 'Agus Darmawan poftofolio website.',
+  metadataBase: new URL('https://agusdarmawn.com'),
+  applicationName: 'Agus Darmawan Personal Website',
+  authors: [{ name: 'Agus Darmawan' }],
+  generator: 'Next.js',
+  keywords: [
+    'Agus Darmawan',
+    'code',
+    'web development',
+    'javascript',
+    'react',
+    'node.js',
+    'portofolio',
+    'web dev',
+    'html',
+    'css',
+    'python',
+    'robotics',
+    'ros',
+    'barunastra',
+  ],
+  referrer: 'origin-when-cross-origin',
+  creator: 'Agus Darmawan',
+  publisher: 'Agus Darmawan',
+};
 
 const popins = Poppins({
   subsets: ['latin'],
