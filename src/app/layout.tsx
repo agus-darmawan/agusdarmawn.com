@@ -5,7 +5,7 @@ import { FC, ReactNode } from 'react';
 import '@/style/globals.css';
 import '@/style/reset.css';
 
-import { Header } from '@/components';
+import { Footer, Header } from '@/components';
 
 const popins = Poppins({
   subsets: ['latin'],
@@ -27,6 +27,7 @@ const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
         >
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -4,7 +4,7 @@ import { CloudinaryImage, GradientText } from '@/components';
 
 const Gallery: FC = () => {
   return (
-    <section className='pt-20 text-center lg:mt-20'>
+    <section className='pt-20 text-center lg:mt-20 mb-32'>
       <h3 className='text-3xl md:text-4xl lg:text-5xl font-semibold'>
         <GradientText>My Gallery</GradientText>
       </h3>
