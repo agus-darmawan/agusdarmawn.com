@@ -4,16 +4,14 @@ import {
   Gallery,
   IntroductionAbout,
   ListExperience,
-  MyStatistics,
   SkillsTabs,
 } from '@/components';
 
 const AboutPage: FC = () => {
   return (
-    <main title='about-page' className='min-h-[300vh]'>
+    <main title='about-page' className='layout'>
       <IntroductionAbout />
       <SkillsTabs />
-      <MyStatistics />
       <ListExperience />
       <Gallery />
     </main>

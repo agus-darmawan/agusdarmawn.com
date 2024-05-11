@@ -1,5 +1,4 @@
 'use client';
-import clsx from 'clsx';
 import { FC, useState } from 'react';
 
 import useScroll from '@/lib/useScrool';
@@ -22,10 +21,7 @@ const Header: FC = () => {
       ></div>
       <nav
         title='main-navigation'
-        className={clsx(
-          'px-10 lg:px-36 md:px-20 w-full md:h-14 h-12',
-          'flex flex-row items-center',
-        )}
+        className='layout w-full md:h-14 h-12 flex flex-row items-center'
       >
         <Hamburger
           className='block md:hidden'

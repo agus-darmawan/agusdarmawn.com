@@ -8,7 +8,7 @@ interface IIconListProps {
 
 const IconList: FC<IIconListProps> = ({ icons }) => {
   return (
-    <ul className='flex flex-row md:gap-4'>
+    <ul className='flex flex-row justify-between w-full md:gap-10 gap-2'>
       {icons.map((icon) => (
         <li key={icon}>
           <SkillIcon icon={icon} />

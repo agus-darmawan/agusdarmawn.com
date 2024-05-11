@@ -31,15 +31,15 @@ const ListExperience: FC = () => {
       end_date: 'Jul 2014',
     },
     {
-      title: 'Barunastra ITS',
-      desc: 'Programming leader',
+      title: 'ASEC EDU',
+      desc: 'IT Mentor',
       start_date: 'Mey 2014',
       end_date: 'Jul 2014',
     },
   ];
 
   return (
-    <section className='flex flex-col md:grid grid-cols-2 gap-20 px-10 md:px-20 lg:px-40 mt-32'>
+    <section className='flex flex-col md:grid grid-cols-2 gap-16 lg:mt-32 md:mt-24 mt-16'>
       <List title='Education' data={education} />
       <List title='Experience' data={experience} />
     </section>

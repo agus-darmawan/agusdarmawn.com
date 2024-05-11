@@ -1,7 +1,19 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   images: {
-    domains: ['skillicons.dev'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'skillicons.dev',
+        pathname: '**',
+      },
+    ],
     dangerouslyAllowSVG: true,
   },
 };

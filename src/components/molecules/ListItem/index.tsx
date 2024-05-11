@@ -15,7 +15,7 @@ const ListItem: FC<IListItemProps> = ({
 }) => {
   return (
     <li className='w-full md:mt-10 mt-5'>
-      <h2 className='md:text-2xl text-base'>{title}</h2>
+      <h2 className='lg:text-2xl md:text-xl text-base'>{title}</h2>
       <div className='flex justify-between pb-2'>
         <h3 className='text-sm md:text-lg'>{desc}</h3>
         <h3 className='md:text-lg text-sm'>

@@ -21,8 +21,8 @@ const SkillIcon: FC<ISkillIcon> = ({ icon }) => {
         height={70}
         width={70}
         alt={icon}
-        imgClassName='rounded-2xl'
-        className='mx-2 lg:h-20 md:h-14 h-8'
+        className='lg:h-20 lg:w-20 md:h-14 md:w-14 h-8 w-8'
+        blurClassName='rounded-2xl'
         useSkeleton={true}
       />
     </figure>

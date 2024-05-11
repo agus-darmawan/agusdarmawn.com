@@ -1,7 +1,8 @@
 'use client';
-import clsx from 'clsx';
 import Image, { ImageProps } from 'next/image';
 import { FC, useState } from 'react';
+
+import { cn } from '@/lib/cn';
 
 interface INextImageProps extends ImageProps {
   useSkeleton?: boolean;
@@ -24,25 +25,20 @@ const NextImage: FC<INextImageProps> = ({
   ...rest
 }) => {
   const [status, setStatus] = useState(useSkeleton ? 'loading' : 'complete');
-  const widthIsSet = className?.includes('w-') ?? false;
 
   return (
-    <figure
-      style={!widthIsSet ? { width: `${width}px` } : undefined}
-      className={className}
-    >
+    <figure className={className}>
       <Image
-        className={clsx(
+        className={cn(
           imgClassName,
-          'bg-gray-400 text-gray-400',
-          status === 'loading' && clsx('animate-pulse', blurClassName),
+          status === 'loading' &&
+            cn('animate-pulse bg-gray-400 text-gray-400', blurClassName),
         )}
         src={src}
         width={width}
         height={height}
         alt={alt}
-        onLoadingComplete={() => setStatus('complete')}
-        layout='responsive'
+        onLoad={() => setStatus('complete')}
         {...rest}
       />
     </figure>
