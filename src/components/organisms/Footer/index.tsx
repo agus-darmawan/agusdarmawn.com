@@ -6,25 +6,19 @@ import { footerlinks, sociallinks } from './links';
 
 const Footer: FC = () => {
   return (
-    <footer className='w-full bg-black border-t-2 border-gray-700 text-center layout'>
+    <footer className='w-full bg-black border-t-2 border-gray-700 text-center layout text-white'>
       <nav title='footer-nav'>
         <ul className='flex flex-row flex-wrap gap-x-10  gap-y-1 justify-center pt-8'>
           {footerlinks.map(({ label, href }, index) => (
-            <Links
-              href={href}
-              className='text-white md:text-lg text-base'
-              key={index}
-            >
+            <Links href={href} className=' md:text-lg text-base' key={index}>
               {label}
             </Links>
           ))}
         </ul>
-        <h2 className='text-white md:text-xl text-lg pt-12 pb-2'>
-          Reach me out
-        </h2>
+        <h2 className=' md:text-xl text-lg pt-12 pb-2'>Reach me out</h2>
         <ul className='flex flex-row gap-10 justify-center'>
           {sociallinks.map(({ icon, href }, index) => (
-            <Links href={href} className='text-white' key={index}>
+            <Links href={href} key={index}>
               {icon}
             </Links>
           ))}
