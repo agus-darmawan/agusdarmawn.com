@@ -30,6 +30,7 @@ async function fetchPostContent(fileName: string): Promise<string | undefined> {
 
 async function parseMDXContent(
   rawMDX: string,
+  fileName: string,
 ): Promise<PostContent | undefined> {
   try {
     const { frontmatter, content } = await compileMDX<{
@@ -56,7 +57,7 @@ async function parseMDXContent(
       },
     });
 
-    const id = __filename.replace(/\.mdx$/, '');
+    const id = fileName.replace(/\.mdx$/, '');
     const blogPostObj: PostContent = {
       meta: {
         id,
@@ -82,7 +83,7 @@ export async function getPostByName(
 ): Promise<PostContent | undefined> {
   const rawMDX = await fetchPostContent(fileName);
   if (!rawMDX) return undefined;
-  return await parseMDXContent(rawMDX);
+  return await parseMDXContent(rawMDX, fileName);
 }
 
 export async function getPostsMeta(

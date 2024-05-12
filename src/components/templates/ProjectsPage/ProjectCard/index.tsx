@@ -1,10 +1,13 @@
 import { FC } from 'react';
 
-import { CloudinaryImage, IconList } from '@/components';
+import getFormattedDate from '@/lib/useFormattedDate';
+
+import { CloudinaryImage, IconList, Links } from '@/components';
 
 import { PostMeta } from '@/interfaces/post';
 
 const ProjectCard: FC<PostMeta> = ({
+  id,
   title,
   description,
   startAt,
@@ -28,10 +31,20 @@ const ProjectCard: FC<PostMeta> = ({
         <h3 className='text-xl capitalize'>{tags}</h3>
         <h2 className='text-5xl font-bold'>{title}</h2>
         <p className='leading-relaxed'>{description}</p>
-        <h3 className='pt-10 pb-2'>
-          {startAt}- {publishedAt}
-        </h3>
-        <IconList icons={techs} variant='small' />
+        <div className='flex flex-row pt-10'>
+          <div>
+            <h3 className='pb-2'>
+              {getFormattedDate(startAt)}- {getFormattedDate(publishedAt)}
+            </h3>
+            <IconList icons={techs} variant='small' />
+          </div>
+          <Links
+            href={id}
+            className='ml-auto pr-20 text-lg text-violet-500 hover:text-violet-400 cursor-pointer'
+          >
+            See More
+          </Links>
+        </div>
       </article>
     </section>
   );
