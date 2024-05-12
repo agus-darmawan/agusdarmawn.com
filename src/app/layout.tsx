@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 import { FC, ReactNode } from 'react';
 
@@ -39,6 +40,8 @@ export const metadata: Metadata = {
   publisher: 'Agus Darmawan',
 };
 
+<script defer src='https://analytics.us.umami.is/script.js'></script>;
+
 const popins = Poppins({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -52,6 +55,12 @@ const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang='en'>
       <body className={popins.className}>
+        <Script
+          defer
+          src='https://analytics.us.umami.is/script.js'
+          data-website-id={process.env.UMAMI_DATA_WEBSITE_ID}
+        />
+
         <ThemeProvider
           attribute='class'
           defaultTheme='dark'
