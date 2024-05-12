@@ -36,6 +36,11 @@ async function parseMDXContent(
       title: string;
       date: string;
       tags: string[];
+      description: string;
+      startAt: string;
+      publishedAt: string;
+      techs: string[];
+      banner: string;
     }>({
       source: rawMDX,
       components: {},
@@ -56,8 +61,13 @@ async function parseMDXContent(
       meta: {
         id,
         title: frontmatter.title,
-        date: frontmatter.date,
         tags: frontmatter.tags,
+        description: frontmatter.description,
+        startAt: frontmatter.startAt,
+        date: frontmatter.date ?? frontmatter.publishedAt,
+        publishedAt: frontmatter.publishedAt,
+        techs: frontmatter.techs,
+        banner: frontmatter.banner,
       },
       content,
     };

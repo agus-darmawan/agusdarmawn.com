@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { FC } from 'react';
 
-import { ProjectCard, ProjectsTitle } from '@/components';
+import { ProjectsTitle } from '@/components';
+import ListCard from '@/components/templates/ProjectsPage/ListCard';
 
 export const metadata: Metadata = {
   title: 'Project ',
@@ -12,7 +13,7 @@ const ProjectsPage: FC = () => {
   return (
     <main title='projects-page' className='layout pt-16 min-h-screen'>
       <ProjectsTitle />
-      <ProjectCard />
+      <ListCard />
     </main>
   );
 };
