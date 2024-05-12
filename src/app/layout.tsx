@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import Script from 'next/script';
@@ -69,6 +70,7 @@ const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
           <Header />
           {children}
           <Footer />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
