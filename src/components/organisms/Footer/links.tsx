@@ -21,7 +21,7 @@ export const footerlinks: IListLinks = [
   },
   {
     label: 'Analytics',
-    href: 'https://analytics.us.umami.is/share/0GKC7BUvMLua4Z1P/agusdarmawn.com',
+    href: 'https://umami.agusdarmawn.com/share/PTgifpM6wkMzwcxl/agusdarmawn.com',
   },
 ];
 
