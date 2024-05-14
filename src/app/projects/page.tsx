@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import { FC } from 'react';
 
-import { ProjectsTitle } from '@/components';
+import { PostTitle } from '@/components';
 import ListCard from '@/components/templates/ProjectsPage/ListCard';
 
 export const metadata: Metadata = {
@@ -9,13 +8,14 @@ export const metadata: Metadata = {
   description: 'This contain Agus Darmawan projects and their dependencies',
 };
 
-const ProjectsPage: FC = () => {
+export default function ProjectsPage() {
   return (
-    <main title='projects-page' className='layout pt-16 min-h-screen'>
-      <ProjectsTitle />
+    <main title='projects-page' className='layout pt-24 min-h-screen'>
+      <PostTitle
+        title='Projects'
+        description='This contain Agus Darmawan projects and their dependencies.'
+      />
       <ListCard />
     </main>
   );
-};
-
-export default ProjectsPage;
+}

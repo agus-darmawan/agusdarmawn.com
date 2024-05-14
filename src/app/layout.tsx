@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 import '@/style/globals.css';
 import '@/style/reset.css';
@@ -52,7 +52,7 @@ interface IRootLayoutProps {
   children: ReactNode;
 }
 
-const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
+export default function RootLayout({ children }: IRootLayoutProps) {
   return (
     <html lang='en'>
       <body className={popins.className}>
@@ -75,6 +75,4 @@ const RootLayout: FC<IRootLayoutProps> = ({ children }) => {
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

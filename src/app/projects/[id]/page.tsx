@@ -12,7 +12,7 @@ export const revalidate = 86400;
 
 type Props = {
   params: {
-    postId: string;
+    id: string;
   };
 };
 
@@ -20,11 +20,11 @@ export async function generateStaticParams() {
   const posts = await getPostsMeta('projects');
   if (!posts) return [];
   return posts.map((post) => ({
-    postId: post.id,
+    id: post.id,
   }));
 }
-export async function generateMetadata({ params: { postId } }: Props) {
-  const post = await getPostByName(`projects/${postId}.mdx`);
+export async function generateMetadata({ params: { id } }: Props) {
+  const post = await getPostByName(`projects/${id}.mdx`);
 
   if (!post) {
     return {
@@ -37,8 +37,8 @@ export async function generateMetadata({ params: { postId } }: Props) {
   };
 }
 
-export default async function Post({ params: { postId } }: Props) {
-  const post = await getPostByName(`projects/${postId}.mdx`);
+export default async function ProjectPostPage({ params: { id } }: Props) {
+  const post = await getPostByName(`projects/${id}.mdx`);
 
   if (!post) notFound();
   const { meta, content } = post;

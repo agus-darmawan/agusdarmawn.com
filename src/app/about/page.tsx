@@ -1,27 +1,21 @@
 import { Metadata } from 'next';
-import { FC } from 'react';
 
-import {
-  Gallery,
-  IntroductionAbout,
-  ListExperience,
-  SkillsTabs,
-} from '@/components';
+import { AboutMe, Gallery, ListExperience, SkillsTabs } from '@/components';
+
+import data from './data.json';
 
 export const metadata: Metadata = {
-  title: 'About',
-  description: 'This contain Agus Darmawan personal information',
+  title: data.aboutMe.title,
+  description: data.aboutMe.description,
 };
 
-const AboutPage: FC = () => {
+export default function AboutPage() {
   return (
     <main title='about-page' className='layout'>
-      <IntroductionAbout />
+      <AboutMe {...data.aboutMe} />
       <SkillsTabs />
       <ListExperience />
       <Gallery />
     </main>
   );
-};
-
-export default AboutPage;
+}

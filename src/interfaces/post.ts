@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
-// Define the ProjectMeta type
-export type ProjectMeta = {
+export interface ProjectMeta {
   title: string;
   description: string;
   startAt: string;
@@ -9,23 +8,20 @@ export type ProjectMeta = {
   techs: string[];
   tags: string[];
   banner: string;
-};
+}
 
-// Define the PostMeta type inheriting from ProjectMeta
-export type PostMeta = ProjectMeta & {
+export interface PostMeta extends ProjectMeta {
   id: string;
   date: string;
-};
+}
 
-// Define the PostContent type
-export type PostContent = {
+export interface PostContent {
   meta: PostMeta;
   content: ReactNode;
-};
+}
 
-// Define the Filetree type
-export type Filetree = {
+export interface Filetree {
   tree: {
     path: string;
   }[];
-};
+}

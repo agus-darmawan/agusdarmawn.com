@@ -1,13 +1,9 @@
-import { FC } from 'react';
-
 import { HeroHomePage } from '@/components';
 
-const HomePage: FC = () => {
+export default function HomePage() {
   return (
     <main>
       <HeroHomePage />
     </main>
   );
-};
-
-export default HomePage;
+}

@@ -16,10 +16,10 @@ const ProjectCard: FC<PostMeta> = ({
   techs,
 }) => {
   return (
-    <section className='w-full flex h-60 gap-10 mt-5 rounded-xl items-center relative overflow-hidden'>
-      <figure className='w-1/2'>
+    <section className='w-full flex md:flex-row flex-col h-60 gap-10 mt-5 rounded-xl items-center relative overflow-hidden'>
+      <figure className='md:w-1/2 w-full '>
         <CloudinaryImage
-          className='h-full w-full'
+          className='md:h-full w-full'
           publicId='agusdarmawn/projects/example-banner'
           alt='agusdarmawn/projects/example-banner'
           width={1440}

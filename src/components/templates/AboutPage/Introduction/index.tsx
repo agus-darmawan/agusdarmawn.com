@@ -4,7 +4,13 @@ import { FC } from 'react';
 import { CloudinaryImage } from '@/components';
 import { GradientText } from '@/components';
 
-const IntroductionAbout: FC = () => {
+interface IIntroductionAboutProps {
+  name: string;
+  description: string;
+  image: string;
+}
+
+const AboutMe: FC<IIntroductionAboutProps> = ({ name, description, image }) => {
   return (
     <section
       title='my-introduction'
@@ -18,39 +24,27 @@ const IntroductionAbout: FC = () => {
       >
         <CloudinaryImage
           className='w-full h-[220px] md:h-[427px] min-w-60 rounded-lg md:max-w-full max-w-40'
-          publicId='agusdarmawn/about/my-pic'
+          publicId={image}
           height={427}
           width={400}
-          alt='My picture'
+          alt={`${name} formal picture`}
           preview={false}
-          title=' '
         />
         <article className='md:text-left text-center'>
           <h2 className='font-semibold text-2xl md:text-4xl lg:text-5xl'>
             About
           </h2>
           <h1 className='font-semibold text-3xl md:text-5xl lg:text-6xl md:mb-10 mb-5'>
-            <GradientText>Agus Darmaan</GradientText>
+            <GradientText>{name}</GradientText>
           </h1>
-          <p className='text-sm lg:text-xl md:text-lg md:leading-relaxed'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            architecto quas laudantium praesentium accusamus dolorum at, non
-            ullam nam alias voluptatum quaerat, odio reiciendis est nobis et
-            porro similique facere iure aliquid corporis eius voluptas.
-            Deleniti,
-            <br /> <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            architecto quas laudantium praesentium accusamus dolorum at, non
-            ullam nam alias voluptatum quaerat, odio reiciendis est Lorem ipsum
-            dolor sit amet consectetur adipisicing elit.
-            <br /> <br />
-            Magnam architecto quas laudantium praesentium accusamus dolorum at,
-            non ullam nam alias voluptatum quaerat, odio reiciendis est
-          </p>
+          <p
+            className='text-sm lg:text-xl md:text-lg md:leading-relaxed'
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></p>
         </article>
       </figure>
     </section>
   );
 };
 
-export default IntroductionAbout;
+export default AboutMe;
