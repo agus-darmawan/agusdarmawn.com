@@ -2,12 +2,17 @@
 import { buildUrl } from 'cloudinary-build-url';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { FC, useState } from 'react';
+import React, { CSSProperties, useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 
 import 'react-image-lightbox/style.css';
 
-interface ICloudinaryImageProps
+interface AspectRatio {
+  width: number;
+  height: number;
+}
+
+interface CloudinaryImageProps
   extends React.ComponentPropsWithoutRef<'figure'> {
   publicId: string;
   height: string | number;
@@ -17,14 +22,12 @@ interface ICloudinaryImageProps
   className?: string;
   preview?: boolean;
   noStyle?: boolean;
-  aspect?: {
-    width: number;
-    height: number;
-  };
+  aspect?: AspectRatio;
   mdx?: boolean;
+  style?: CSSProperties;
 }
 
-const CloudinaryImage: FC<ICloudinaryImageProps> = ({
+const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
   publicId,
   height,
   width,
@@ -42,7 +45,7 @@ const CloudinaryImage: FC<ICloudinaryImageProps> = ({
 
   const urlBlurred = buildUrl(publicId, {
     cloud: {
-      cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUDNAME,
+      cloudName: 'theodorusclarence',
     },
     transformations: {
       effect: {
@@ -54,6 +57,7 @@ const CloudinaryImage: FC<ICloudinaryImageProps> = ({
         : undefined,
     },
   });
+
   const url = buildUrl(publicId, {
     cloud: {
       cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUDNAME,
@@ -73,7 +77,7 @@ const CloudinaryImage: FC<ICloudinaryImageProps> = ({
   return (
     <figure
       className={clsx(className, {
-        'overflow-hidden': !noStyle,
+        'overflow-hidden rounded shadow dark:shadow-none': !noStyle,
         'mx-auto w-full': mdx && +width <= 800,
       })}
       style={{
@@ -124,12 +128,7 @@ const CloudinaryImage: FC<ICloudinaryImageProps> = ({
         </div>
       </div>
       {isOpen && (
-        <Lightbox
-          mainSrc={url}
-          onCloseRequest={() => setIsOpen(false)}
-          enableZoom
-          imageTitle={title || alt}
-        />
+        <Lightbox mainSrc={url} onCloseRequest={() => setIsOpen(false)} />
       )}
     </figure>
   );
