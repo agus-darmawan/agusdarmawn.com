@@ -5,6 +5,7 @@ import Input from './Input';
 import Links from './Links';
 import NavLinks from './NavLink';
 import NextImage from './NextImages';
+import Tag from './Tags';
 
 export {
   CloudinaryImage,
@@ -14,4 +15,5 @@ export {
   Links,
   NavLinks,
   NextImage,
+  Tag,
 };

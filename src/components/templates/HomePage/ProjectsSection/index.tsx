@@ -122,7 +122,7 @@ const ProjectsSection: FC = () => {
           </div>
         </figcaption>
       </figure>
-      <section className='w-full h-32 mt-10 rounded-2xl dark:flex items-center bg-gray-100 dark:bg-gray-800 hidden justify-between px-10'>
+      <section className='w-full h-32 mt-10 rounded-2xl flex items-center bg-gray-100 dark:bg-gray-800 justify-between px-10'>
         <div>
           <h3 className='text-3xl font-semibold'>Intresting in my projects</h3>
           <p className='text-lg'>
