@@ -1,4 +1,4 @@
 import HeroHomePage from './Hero';
-import ProjectsCarousel from './ProjectsCarousel';
+import ProjectsSection from './ProjectsSection';
 
-export { HeroHomePage, ProjectsCarousel };
+export { HeroHomePage, ProjectsSection };

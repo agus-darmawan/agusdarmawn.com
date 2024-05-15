@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from 'react';
 
-import { CloudinaryImage, IconList } from '@/components';
+import { CloudinaryImage, IconList, PostTitle } from '@/components';
 
 const dummyData = [
   {
@@ -35,20 +35,23 @@ const dummyData = [
   },
 ];
 
-const ProjectsCarousel: FC = () => {
+const ProjectsSection: FC = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
+  const [lastButtonClick, setLastButtonClick] = useState<number>(Date.now());
   const totalSlides = dummyData.length;
 
   const handlePrev = () => {
     setActiveSlide((prevSlide) =>
       prevSlide > 0 ? prevSlide - 1 : totalSlides - 1,
     );
+    setLastButtonClick(Date.now());
   };
 
   const handleNext = () => {
     setActiveSlide((prevSlide) =>
       prevSlide < totalSlides - 1 ? prevSlide + 1 : 0,
     );
+    setLastButtonClick(Date.now());
   };
 
   useEffect(() => {
@@ -56,22 +59,28 @@ const ProjectsCarousel: FC = () => {
       setActiveSlide((prevSlide) =>
         prevSlide < totalSlides - 1 ? prevSlide + 1 : 0,
       );
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
-  }, [totalSlides]);
+  }, [totalSlides, lastButtonClick]);
 
   const data = dummyData[activeSlide];
 
   return (
     <section className='layout h-screen'>
-      <figure className='grid grid-cols-5 rounded-lg overflow-hidden'>
+      <PostTitle
+        title='Feature Projects'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatum odit, alias dignissimos soluta delectus?'
+      />
+      <figure className='grid grid-cols-5 rounded-lg overflow-hidden mt-10'>
         <CloudinaryImage
           publicId={data.banner}
-          height={461}
+          height={350}
           width={465}
-          className='h-80 w-full col-span-2'
+          className='col-span-2 '
           alt={data.title}
+          scale
+          preview={false}
         />
         <figcaption className='flex flex-col justify-between p-2 col-span-3 pl-16'>
           <div className='space-y-2'>
@@ -85,12 +94,13 @@ const ProjectsCarousel: FC = () => {
           <div className='flex justify-between'>
             <div className='flex gap-2 items-center'>
               {[...Array(totalSlides)].map((_, index) => (
-                <div
+                <button
+                  onClick={() => setActiveSlide(index)}
                   key={index}
                   className={`h-3 w-3 rounded-full ${
                     index === activeSlide ? 'bg-blue-500' : 'bg-blue-100'
                   }`}
-                ></div>
+                ></button>
               ))}
             </div>
             <div className='flex gap-3'>
@@ -112,8 +122,24 @@ const ProjectsCarousel: FC = () => {
           </div>
         </figcaption>
       </figure>
+      <section className='w-full h-32 mt-10 rounded-2xl dark:flex items-center bg-gray-100 dark:bg-gray-800 hidden justify-between px-10'>
+        <div>
+          <h3 className='text-3xl font-semibold'>Intresting in my projects</h3>
+          <p className='text-lg'>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+        <div className='space-x-5'>
+          <button className='border-2 px-5 py-2 text-lg border-black dark:border-gray-100 rounded-lg'>
+            More Projects
+          </button>
+          <button className='border-2 px-5 py-2 text-lg border-black dark:border-gray-100 rounded-lg'>
+            Email me
+          </button>
+        </div>
+      </section>
     </section>
   );
 };
 
-export default ProjectsCarousel;
+export default ProjectsSection;

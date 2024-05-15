@@ -1,10 +1,10 @@
-import { HeroHomePage, ProjectsCarousel } from '@/components';
+import { HeroHomePage, ProjectsSection } from '@/components';
 
 export default function HomePage() {
   return (
     <main>
       <HeroHomePage />
-      <ProjectsCarousel />
+      <ProjectsSection />
     </main>
   );
 }

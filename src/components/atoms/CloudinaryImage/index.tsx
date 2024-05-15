@@ -25,6 +25,7 @@ interface CloudinaryImageProps
   aspect?: AspectRatio;
   mdx?: boolean;
   style?: CSSProperties;
+  scale?: boolean;
 }
 
 const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
@@ -39,6 +40,7 @@ const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
   mdx = false,
   style,
   aspect,
+  scale = false,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -110,7 +112,12 @@ const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
             background-size: 100%;
           }
         `}</style>
-        <div className='absolute left-0 top-0'>
+        <div
+          className={clsx(
+            'absolute left-0 top-0 bottom-0 right-0',
+            scale ? 'scale-150' : '',
+          )}
+        >
           <Image
             width={Number(
               resizedToMaxWidth ? Math.min(+width, RESIZE_MAX_WIDTH) : width,
@@ -124,6 +131,7 @@ const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
             src={url}
             alt={alt}
             title={title || alt}
+            className={clsx(scale ? 'scale-150' : '')}
           />
         </div>
       </div>
