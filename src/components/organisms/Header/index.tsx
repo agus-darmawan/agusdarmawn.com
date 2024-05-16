@@ -1,7 +1,7 @@
 'use client';
 import { FC, useState } from 'react';
 
-import useScroll from '@/lib/useScrool';
+import useScroll from '@/hooks/useScrool';
 
 import { Hamburger, MobileNavbar, NavLinks, ThemeButton } from '@/components';
 

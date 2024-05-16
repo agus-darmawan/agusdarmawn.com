@@ -125,7 +125,7 @@ const ProjectsSection: FC = () => {
       <section className='w-full h-32 mt-10 rounded-2xl flex items-center bg-gray-100 dark:bg-gray-800 justify-between px-10'>
         <div>
           <h3 className='text-3xl font-semibold'>Intresting in my projects</h3>
-          <p className='text-lg'>
+          <p className='text-base'>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>

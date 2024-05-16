@@ -47,7 +47,7 @@ const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
 
   const urlBlurred = buildUrl(publicId, {
     cloud: {
-      cloudName: 'theodorusclarence',
+      cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUDNAME,
     },
     transformations: {
       effect: {

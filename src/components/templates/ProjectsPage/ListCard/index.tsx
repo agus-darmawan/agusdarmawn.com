@@ -1,8 +1,8 @@
-import { getPostsMeta } from '@/lib/usePost';
+import { getAllPostFrontmatter } from '@/lib/mdx.server';
 
 import { ProjectCard } from '@/components';
 export default async function ListCard() {
-  const posts = await getPostsMeta('projects');
+  const posts = await getAllPostFrontmatter('projects');
   if (!posts) {
     return <p className='mt-10 text-center'>Sorry, no posts available.</p>;
   }

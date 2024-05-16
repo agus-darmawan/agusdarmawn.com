@@ -1,18 +1,13 @@
 import { ReactNode } from 'react';
 
-export interface ProjectMeta {
-  title: string;
-  description: string;
-  startAt: string;
-  publishedAt: string;
-  techs: string[];
-  tags: string[];
-  banner: string;
-}
+import { Frontmatter } from './frontmatter';
 
-export interface PostMeta extends ProjectMeta {
-  id: string;
-  date: string;
+export type PostType = 'blogs' | 'projects' | 'snippets';
+
+export interface PostMeta {
+  slug: string;
+  readingTime: string;
+  frontmatter: Frontmatter;
 }
 
 export interface PostContent {
