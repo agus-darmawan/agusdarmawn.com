@@ -31,7 +31,7 @@ const NavLinks: FC<INavLinkProps> = ({
         'text-sm md:text-lg md:font-semibold',
         isActive
           ? activeClassName || 'text-blue-500'
-          : inactiveClassName || 'text-white hover:text-violet-400',
+          : inactiveClassName || 'hover:text-violet-400',
       )}
     >
       {label}

@@ -7,7 +7,7 @@ const FeedbackFish: FC = () => {
     <FeedbackFishReact
       projectId={String(process.env.NEXT_PUBLIC_FEEDBACKFISH_PROJECTID)}
     >
-      <h3 className='text-white  cursor-pointer hover:text-violet-400'>
+      <h3 className='text-violet-500  cursor-pointer hover:text-violet-400'>
         Send Feedback
       </h3>
     </FeedbackFishReact>

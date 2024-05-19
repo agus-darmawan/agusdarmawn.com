@@ -1,4 +1,5 @@
 'use client';
+import clsx from 'clsx';
 import { FC, useState } from 'react';
 
 import useScroll from '@/hooks/useScrool';
@@ -12,7 +13,12 @@ const Header: FC = () => {
   const scrollPercentage: number = useScroll();
 
   return (
-    <header className='bg-black fixed w-full z-20'>
+    <header
+      className={clsx(
+        'dark:bg-black/70 backdrop-blur',
+        'fixed w-full md:rounded-b-xl z-20',
+      )}
+    >
       <div
         className='h-2'
         style={{
@@ -21,21 +27,20 @@ const Header: FC = () => {
       ></div>
       <nav
         title='main-navigation'
-        className='layout w-full md:h-14 h-12 flex flex-row items-center'
+        className='layout md:h-14 h-12 flex flex-row items-center justify-between'
       >
         <Hamburger
           className='block md:hidden'
           toggled={isOpen}
           size={20}
           onToggle={() => setIsOpen(!isOpen)}
-          color='white'
         />
         <ul className='hidden md:flex flex-row gap-10'>
           {navlinks.map((value, index) => (
             <NavLinks key={index} label={value.label} href={value.href} />
           ))}
         </ul>
-        <ThemeButton className='ml-auto' />
+        <ThemeButton />
       </nav>
       <MobileNavbar isOpen={isOpen} links={navlinks} />
     </header>

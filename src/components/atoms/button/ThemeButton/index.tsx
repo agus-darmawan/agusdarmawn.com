@@ -1,8 +1,9 @@
 'use client';
-import clsx from 'clsx';
 import { useTheme } from 'next-themes';
 import { ComponentPropsWithoutRef, FC, useEffect, useState } from 'react';
 import { FiMoon, FiSun } from 'react-icons/fi';
+
+import { cn } from '@/lib/cn';
 
 const ThemeButton: FC<ComponentPropsWithoutRef<'button'>> = ({
   className,
@@ -14,12 +15,7 @@ const ThemeButton: FC<ComponentPropsWithoutRef<'button'>> = ({
 
   return (
     <button
-      className={clsx(
-        'text-white',
-        'p-2 rounded-full',
-        'hover:bg-slate-400/20',
-        className,
-      )}
+      className={cn('p-2 rounded-full', 'hover:bg-slate-400/20', className)}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       {...rest}
     >

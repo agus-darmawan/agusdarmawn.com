@@ -5,7 +5,7 @@ import ListItem from './ListItem';
 import SkillIcon from './SkilIcon';
 import TabsBody from './TabsBody';
 import TabsHead from './TabsHead';
-import ThemeButton from './ThemeButton';
+import TOC from './TOC';
 
 export {
   FeedbackFish,
@@ -15,5 +15,5 @@ export {
   SkillIcon,
   TabsBody,
   TabsHead,
-  ThemeButton,
+  TOC,
 };

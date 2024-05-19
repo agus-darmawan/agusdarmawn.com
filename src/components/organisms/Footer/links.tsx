@@ -29,16 +29,16 @@ export const sociallinks: IListLinks = [
   {
     label: 'Github',
     href: 'https://github.com/agus-darmawan',
-    icon: <IoLogoGithub color='fff' size={35} />,
+    icon: <IoLogoGithub size={25} />,
   },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/agusdarmawann/',
-    icon: <IoLogoLinkedin color='fff' size={35} />,
+    icon: <IoLogoLinkedin size={25} />,
   },
   {
     label: 'Gmail',
     href: 'mailto:wayanagus.dr@gmail.com',
-    icon: <IoLogoGoogle color='fff' size={35} />,
+    icon: <IoLogoGoogle size={25} />,
   },
 ];

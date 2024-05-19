@@ -5,7 +5,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings/lib';
 import rehypeHighlight from 'rehype-highlight/lib';
 import rehypeSlug from 'rehype-slug';
 
-import { CloudinaryImage, Links } from '@/components';
+import MDXComponents from '@/components/organisms/MDXComponents';
 
 import { Frontmatter } from '@/interfaces/frontmatter';
 import { Filetree, PostContent, PostMeta, PostType } from '@/interfaces/post';
@@ -43,17 +43,22 @@ async function transformMDXContent(
   try {
     const { frontmatter, content } = await compileMDX<Frontmatter>({
       source: rawFile,
-      components: {
-        CloudinaryImage,
-        a: Links,
-      },
+      components: { ...MDXComponents },
       options: {
         parseFrontmatter: true,
         mdxOptions: {
           rehypePlugins: [
-            rehypeHighlight,
             rehypeSlug,
-            [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+            [
+              rehypeAutolinkHeadings,
+              {
+                behavior: 'wrap',
+                properties: {
+                  className: ['hash-anchor'],
+                },
+              },
+            ],
+            rehypeHighlight,
           ],
         },
       },
