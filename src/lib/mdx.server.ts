@@ -5,7 +5,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings/lib';
 import rehypeHighlight from 'rehype-highlight/lib';
 import rehypeSlug from 'rehype-slug';
 
-import MDXComponents from '@/components/organisms/MDXComponents';
+import { MDXComponents } from '@/components';
 
 import { Frontmatter } from '@/interfaces/frontmatter';
 import { Filetree, PostContent, PostMeta, PostType } from '@/interfaces/post';

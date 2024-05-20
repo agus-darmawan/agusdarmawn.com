@@ -21,7 +21,7 @@ const Footer: FC = () => {
             </Links>
           ))}
         </ul>
-        <h2 className=' md:text-lg pt-5 pb-2'>Reach me out</h2>
+        <h2 className=' md:text-lg pt-5 md:pt-12 pb-2'>Reach me out</h2>
         <ul className='flex flex-row gap-5 justify-center'>
           {sociallinks.map(({ icon, href }, index) => (
             <Links href={href} key={index}>
@@ -29,7 +29,7 @@ const Footer: FC = () => {
             </Links>
           ))}
         </ul>
-        <section className='flex gap-2 justify-center text-center py-5 text-sm md:text-base'>
+        <section className='flex gap-2 justify-center text-center py-5 md:py-8 text-sm md:text-base'>
           <h3>© Agus Darmawan {new Date().getFullYear()} • </h3>
           <FeedbackFish />
         </section>

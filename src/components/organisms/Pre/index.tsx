@@ -2,16 +2,16 @@
 import React, { ComponentPropsWithoutRef, FC, useRef } from 'react';
 import { BiCheck, BiCopy } from 'react-icons/bi';
 
-import 'highlight.js/styles/github-dark-dimmed.css';
+import 'highlight.js/styles/github-dark-dimmed.css'; // Ensure this path is correct
 
-import useClipboard from '@/hooks/useClipboard';
+import useClipboard from '@/hooks/useClipboard'; // Ensure this path is correct
 
-const Pre: FC<ComponentPropsWithoutRef<'pre'>> = ({ children, ...rest }) => {
+const Code: FC<ComponentPropsWithoutRef<'pre'>> = ({ children, ...rest }) => {
   const [copied, copyToClipboard] = useClipboard();
   const preRef = useRef<HTMLPreElement>(null);
 
   return (
-    <pre
+    <code
       {...rest}
       ref={preRef}
       className='relative p-0 bg-gray-700 my-6 rounded-xl overflow-hidden'
@@ -26,8 +26,8 @@ const Pre: FC<ComponentPropsWithoutRef<'pre'>> = ({ children, ...rest }) => {
       <code className='leading-relaxed text-xs md:text-base font-extralight'>
         {children}
       </code>
-    </pre>
+    </code>
   );
 };
 
-export default Pre;
+export default Code;
