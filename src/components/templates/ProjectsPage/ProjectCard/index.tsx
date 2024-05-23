@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import getFormattedDate from '@/lib/useFormattedDate';
 
-import { CloudinaryImage, IconList, Links } from '@/components';
+import { CloudinaryImage, IconList, Link } from '@/components';
 
 import { PostMeta } from '@/interfaces/post';
 
@@ -30,12 +30,12 @@ const ProjectCard: FC<PostMeta> = ({ slug, frontmatter }) => {
             </h3>
             <IconList icons={frontmatter.techs} variant='small' />
           </div>
-          <Links
+          <Link
             href={slug}
             className='ml-auto text-lg text-violet-500 hover:text-violet-400 cursor-pointer'
           >
             See More
-          </Links>
+          </Link>
         </div>
       </article>
     </section>

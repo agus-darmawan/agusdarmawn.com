@@ -1,7 +1,7 @@
 import { MDXProvider } from '@mdx-js/react';
 import { ComponentProps, ComponentPropsWithoutRef, FC } from 'react';
 
-import { CloudinaryImage, Links } from '@/components';
+import { CloudinaryImage, Link } from '@/components';
 
 const H2: FC<ComponentPropsWithoutRef<'h2'>> = ({ children, id }) => (
   <h2 className='leading-relaxed text-3xl font-semibold mdx' id={id}>
@@ -23,7 +23,7 @@ const H4: FC<ComponentPropsWithoutRef<'h4'>> = ({ children, id }) => (
 
 const MDXComponents: ComponentProps<typeof MDXProvider>['components'] = {
   CloudinaryImage,
-  a: Links,
+  a: Link,
   // pre: Code,
   h2: H2,
   h3: H3,

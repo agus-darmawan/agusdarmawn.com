@@ -2,12 +2,17 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { FC } from 'react';
 
+import { Link } from '@/components';
+
 const HeroHomePage: FC = () => {
+  const startYear = 2022;
+  const currentYear = new Date().getFullYear();
+  const experienceYears = currentYear - startYear;
   return (
     <section
       className={clsx(
-        'flex flex-col lg:flex-row lg:justify-start justify-center',
-        'h-screen relative overflow-hidden',
+        'flex flex-col lg:flex-row lg:justify-start justify-center items-center',
+        'h-screen overflow-hidden',
       )}
     >
       <div
@@ -32,16 +37,19 @@ const HeroHomePage: FC = () => {
           </h2>
         </div>
         <p className='pt-5 text-xs lg:text-xl md:text-lg'>
-          Barunastra Team's Programmer Division Leader, <br />
-          with over 2 years of React frontend experience.
+          <Link href='https://barunastra-its.or.id/' target='_blank' underline>
+            Barunastra Team's
+          </Link>{' '}
+          Programmer Division Leader, <br />
+          with over {experienceYears} years of React frontend experience.
         </p>
       </div>
       <Image
         src='/img/home-page/hero-vector.svg'
         height={600}
         width={600}
-        className='absolute lg:static -right-60 bottom-0 -z-10 dark:block hidden'
-        alt='vector'
+        className='dark:block hidden absolute -right-60  bottom-1  -z-10 lg:static'
+        alt='vector hand drawing techstack like next.js expres etc'
       />
     </section>
   );

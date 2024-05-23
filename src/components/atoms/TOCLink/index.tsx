@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ComponentPropsWithoutRef, FC } from 'react';
 
-import { Links } from '@/components';
+import { Link } from '@/components';
 
 interface ITOCLinkProps extends ComponentPropsWithoutRef<'a'> {
   text: string;
@@ -20,7 +20,7 @@ const TOCLinks: FC<ITOCLinkProps> = ({
   ...rest
 }) => {
   return (
-    <Links
+    <Link
       href={`#${id}`}
       id={`link-${id}`}
       className={clsx(
@@ -31,7 +31,7 @@ const TOCLinks: FC<ITOCLinkProps> = ({
       style={{ paddingLeft: (level - minLevel) * 20 }}
     >
       {text}
-    </Links>
+    </Link>
   );
 };
 

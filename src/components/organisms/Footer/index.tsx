@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { FC } from 'react';
 
-import { FeedbackFish, Links } from '@/components';
+import { FeedbackFish, Link } from '@/components';
 
 import { footerlinks, sociallinks } from './links';
 
@@ -16,17 +16,17 @@ const Footer: FC = () => {
           )}
         >
           {footerlinks.map(({ label, href }, index) => (
-            <Links href={href} className=' md:text-base text-sm' key={index}>
+            <Link href={href} className=' md:text-base text-sm' key={index}>
               {label}
-            </Links>
+            </Link>
           ))}
         </ul>
         <h2 className=' md:text-lg pt-5 md:pt-12 pb-2'>Reach me out</h2>
         <ul className='flex flex-row gap-5 justify-center'>
           {sociallinks.map(({ icon, href }, index) => (
-            <Links href={href} key={index}>
+            <Link href={href} key={index}>
               {icon}
-            </Links>
+            </Link>
           ))}
         </ul>
         <section className='flex gap-2 justify-center text-center py-5 md:py-8 text-sm md:text-base'>
