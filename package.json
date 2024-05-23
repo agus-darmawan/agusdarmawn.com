@@ -16,6 +16,9 @@
   },
   "dependencies": {
     "@feedback-fish/react": "^1.2.2",
+    "@prisma/client": "5.14.0",
+    "@tanstack/react-query": "^5.37.1",
+    "@tanstack/react-query-devtools": "^5.37.1",
     "@vercel/speed-insights": "^1.0.10",
     "axios": "^1.6.8",
     "cloudinary-build-url": "^0.2.4",
@@ -41,7 +44,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "@tanstack/eslint-plugin-query": "^5.28.11",
     "@types/lodash": "^4.17.4",
-    "@types/node": "^20",
+    "@types/node": "^20.12.3",
     "@types/react": "^18",
     "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18",
@@ -66,6 +69,10 @@
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^4.0.0",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }

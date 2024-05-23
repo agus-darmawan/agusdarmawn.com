@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,4 +5,27 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model PostMeta {
+  id        Int      @id @default(autoincrement())
+  slug      String   @unique
+  createdAt DateTime @default(now())
+  likes     Like[]
+  views     View[]
+}
+
+model Like {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  sessionId  String
+  postMetaId Int?
+  postMeta   PostMeta? @relation(fields: [postMetaId], references: [id], onDelete: Cascade)
+}
+
+model View {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  postMetaId Int?
+  postMeta   PostMeta? @relation(fields: [postMetaId], references: [id], onDelete: Cascade)
 }
