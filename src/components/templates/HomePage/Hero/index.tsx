@@ -36,7 +36,7 @@ const HeroHomePage: FC = () => {
             Front-end Dev
           </h2>
         </div>
-        <p className='pt-5 text-xs lg:text-xl md:text-lg'>
+        <p className='pt-5 text-xs lg:text-xl md:text-lg max-w-[50vw]'>
           <Link href='https://barunastra-its.or.id/' target='_blank' underline>
             Barunastra Team's
           </Link>{' '}
