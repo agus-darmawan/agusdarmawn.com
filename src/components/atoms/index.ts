@@ -1,4 +1,5 @@
 import ThemeButton from './buttons/ThemeButton';
+import Card from './Card';
 import CloudinaryImage from './CloudinaryImage';
 import GradientText from './GradientText';
 import H2 from './H2';
@@ -13,6 +14,7 @@ import Tag from './Tags';
 import TOCLink from './TOCLink';
 
 export {
+  Card,
   CloudinaryImage,
   GradientText,
   H2,

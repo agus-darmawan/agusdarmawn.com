@@ -6,11 +6,11 @@ interface TagProps {
 
 const Tag: FC<TagProps> = ({ labels }) => {
   return (
-    <div className='space-x-2 text-base'>
+    <div className='md:space-x-1'>
       {labels.map((label, index) => (
         <button
           key={index}
-          className='py-1 px-3 rounded-xl bg-slate-900 text-white'
+          className='px-2 rounded-xl bg-slate-900/50 text-white md:text-sm text-xs font-light'
         >
           {label}
         </button>

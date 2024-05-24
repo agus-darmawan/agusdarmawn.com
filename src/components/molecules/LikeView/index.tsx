@@ -7,7 +7,7 @@ interface LikeViewProps {
 
 const LikeView: FC<LikeViewProps> = ({ views, likes }) => {
   return (
-    <div className='flex gap-2'>
+    <div className='flex gap-2 font-light text-sm md:text-base'>
       <h4>
         {views} View{views !== 1 && 's'}
       </h4>
