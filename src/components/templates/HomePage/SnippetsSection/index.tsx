@@ -1,7 +1,9 @@
-import { FC } from 'react';
+'use client';
+import { FC, useMemo } from 'react';
 
-import { CardSnippets, PostTitle } from '@/components';
+import useWindowSize from '@/hooks/useWindowSize';
 
+import { PostTitle, SnippetCard } from '@/components';
 const dummyCardData = [
   {
     title: 'Card Snippet 1',
@@ -21,7 +23,7 @@ const dummyCardData = [
   {
     title: 'Card Snippet 3',
     description: 'At vero eos et accusamus et iusto odio dignissimos ducimus.',
-    tags: ['Angular', 'TypeScript'],
+    tags: ['Angular', 'TS'],
     views: 75,
     likes: 30,
   },
@@ -29,22 +31,31 @@ const dummyCardData = [
     title: 'Card Snippet 4',
     description:
       'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.',
-    tags: ['JavaScript', 'Node.js'],
+    tags: ['JS', 'Node.js'],
     views: 100,
     likes: 40,
   },
 ];
 
 const SnippetsSection: FC = () => {
+  const { width } = useWindowSize();
+
+  const itemsToShow = useMemo(() => {
+    if (width >= 1024) return 6;
+    if (width >= 768) return 4;
+    if (width >= 640) return 3;
+    return 2;
+  }, [width]);
   return (
     <section className='layout mb-20 mt-20'>
       <PostTitle
         title='Feature Snippets'
         description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatum odit, alias dignissimos soluta delectus?'
       />
-      <div className='grid grid-cols-2 gap-10 mt-10 mb-4'>
-        {dummyCardData.map((card, index) => (
-          <CardSnippets
+
+      <div className='md:grid lg:grid-cols-3 md:grid-cols-2 flex flex-col lg:gap-5 gap-2 md:mt-10 mt-5 mb-4'>
+        {dummyCardData.slice(0, itemsToShow).map((card, index) => (
+          <SnippetCard
             key={index}
             title={card.title}
             description={card.description}

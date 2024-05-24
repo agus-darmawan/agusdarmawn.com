@@ -1,4 +1,4 @@
-import CardSnippets from './CardSnippets';
+import SnippetCard from './card/SnippetCard';
 import ClientTOC from './ClientTOC';
 import Footer from './Footer';
 import Header from './Header';
@@ -10,7 +10,6 @@ import Code from './Pre';
 import Tabs from './Tabs';
 
 export {
-  CardSnippets,
   ClientTOC,
   Code,
   Footer,
@@ -19,5 +18,6 @@ export {
   MDXComponents,
   MobileNavbar,
   PostTitle,
+  SnippetCard,
   Tabs,
 };
