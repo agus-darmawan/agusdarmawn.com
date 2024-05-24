@@ -8,7 +8,7 @@ const SnippetCard: FC<PostMeta> = ({ slug, frontmatter }) => {
   return (
     <Card
       className='md:h-36 h-32 rounded-xl px-5 py-2 flex flex-col justify-between'
-      href={`snipets/${slug}`}
+      href={`${slug}`}
     >
       <h3 className='md:text-xl text-lg font-semibold'>{frontmatter.title}</h3>
       <p className='text-sm md:text-base font-light'>

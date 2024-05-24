@@ -54,7 +54,9 @@ export default async function ProjectPostPage({ params: { slug } }: Props) {
         </div>
       </section>
       <p className='mt-10 mb-20'>
-        <Link href='/projects'>← Back</Link>
+        <Link href='/projects' className='text-xl'>
+          ← Back
+        </Link>
       </p>
     </main>
   );

@@ -50,16 +50,17 @@ const TOC: FC<ITOCProps> = ({ contents, activeHeadings, minLevel }) => {
   }, [activeHeadings]);
   return (
     <section className='w-full' id='toc-container'>
-      <h3>Table of Contents</h3>
+      <h3 className='text-lg mb-2 '>Table of Contents</h3>
       <ul>
         {contents.map(({ level, text, id }) => (
-          <li key={id}>
+          <li key={id} className='space-y-3'>
             <TOCLink
               id={id}
               href={`#${id}`}
               activeHeading={activeHeadings}
               level={level}
               minLevel={minLevel}
+              className='py-2'
               text={text}
             />
           </li>

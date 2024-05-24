@@ -15,5 +15,5 @@
 }
 
 .layout {
-  @apply mx-10 lg:mx-36 md:mx-20 relative overflow-hidden;
+  @apply mx-10 lg:mx-36 md:mx-20;
 }

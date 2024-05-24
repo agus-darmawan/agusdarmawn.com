@@ -14,7 +14,7 @@ const Link: FC<LinkProps> = ({
   underline,
   ...rest
 }) => {
-  const linkClassName = cn(className, {
+  const linkClassName = cn('no-underline', className, {
     'underline underline-offset-4 decoration-violet-500 decoration-dotted hover:decoration-solid transition-transform duration-1000':
       underline,
   });

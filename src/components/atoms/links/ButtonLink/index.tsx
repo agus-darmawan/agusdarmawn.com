@@ -3,7 +3,7 @@ import { ComponentPropsWithRef, FC } from 'react';
 
 import { cn } from '@/lib/cn';
 
-import Link from '../../Linkss';
+import Link from '../Link';
 
 // Extend with type like primary secondary etc
 

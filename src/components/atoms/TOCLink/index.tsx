@@ -1,7 +1,6 @@
 import clsx from 'clsx';
+import Link from 'next/link';
 import { ComponentPropsWithoutRef, FC } from 'react';
-
-import { Link } from '@/components';
 
 interface ITOCLinkProps extends ComponentPropsWithoutRef<'a'> {
   text: string;
@@ -25,12 +24,14 @@ const TOCLinks: FC<ITOCLinkProps> = ({
       id={`link-${id}`}
       className={clsx(
         className,
+        'hover:text-violet-600',
         activeHeading == id ? 'text-blue-500' : 'text-gray-400',
       )}
       {...rest}
       style={{ paddingLeft: (level - minLevel) * 20 }}
     >
       {text}
+      <span className='sr-only text-blue-500'>{activeHeading}</span>
     </Link>
   );
 };
