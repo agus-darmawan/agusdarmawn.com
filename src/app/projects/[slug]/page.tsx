@@ -5,7 +5,7 @@ import { cn } from '@/lib/cn';
 import { getFileBySlug, getPostFrontmatter } from '@/lib/mdx.server';
 
 import { ClientTOC } from '@/components';
-import { CloudinaryImage, Links } from '@/components';
+import { CloudinaryImage, Link } from '@/components';
 type Props = {
   params: {
     slug: string;
@@ -54,7 +54,7 @@ export default async function ProjectPostPage({ params: { slug } }: Props) {
         </div>
       </section>
       <p className='mt-10 mb-20'>
-        <Links href='/projects'>← Back</Links>
+        <Link href='/projects'>← Back</Link>
       </p>
     </main>
   );
