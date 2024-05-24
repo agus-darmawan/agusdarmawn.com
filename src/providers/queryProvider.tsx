@@ -7,7 +7,11 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ThemeProvider } from 'next-themes';
 import { useState } from 'react';
 
-export default function Providers({ children }: { children: React.ReactNode }) {
+export default function QueryProviders({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [queryClient] = useState(
     () =>
       new QueryClient({

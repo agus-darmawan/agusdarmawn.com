@@ -24,15 +24,15 @@ const HeroHomePage: FC = () => {
         <h1
           className={clsx(
             '-mt-52 lg:mt-0',
-            'font-semibold leading-tight text-4xl md:text-7xl',
+            'font-semibold leading-tight text-4xl md:text-6xl',
           )}
         >
           Hi! <br /> i'm{' '}
           <span className='font-bold text-violet-500'>Darmawan</span>
         </h1>
         <div className='flex items-center md:gap-8 gap-2'>
-          <div className='h-0.5 md:h-1 w-32  md:w-64 lg:w-72 dark:bg-zinc-100 bg-black '></div>
-          <h2 className='font-semibold md:text-2xl lg:text-3xl'>
+          <div className='h-0.5 md:h-1 w-32  md:w-52 lg:w-64 dark:bg-zinc-100 bg-black '></div>
+          <h2 className='font-semibold md:text-2xl lg:text-2xl'>
             Front-end Dev
           </h2>
         </div>

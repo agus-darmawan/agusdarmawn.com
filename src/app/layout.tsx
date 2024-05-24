@@ -7,9 +7,9 @@ import { ReactNode } from 'react';
 import '@/style/globals.css';
 import '@/style/reset.css';
 
-import Providers from '@/lib/providers';
-
 import { Footer, Header } from '@/components';
+
+import QueryProviders from '@/providers/queryProvider';
 
 export const metadata: Metadata = {
   title: {
@@ -60,12 +60,12 @@ const RootLayout = ({ children }: IRootLayoutProps) => {
           src='https://analytics.us.umami.is/script.js'
           data-website-id={process.env.NEXT_PUBLIC_UMAMI_DATA_WEBSITE_ID}
         />
-        <Providers>
+        <QueryProviders>
           <Header />
           {children}
           <Footer />
           <SpeedInsights />
-        </Providers>
+        </QueryProviders>
       </body>
     </html>
   );
