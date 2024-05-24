@@ -1,4 +1,5 @@
 import BlogCard from './card/BlogCard';
+import ProjectCard from './card/ProjectCard';
 import SnippetCard from './card/SnippetCard';
 import ClientTOC from './ClientTOC';
 import Footer from './Footer';
@@ -20,6 +21,7 @@ export {
   MobileNavbar,
   PostTitle,
   Pre,
+  ProjectCard,
   SnippetCard,
   Tabs,
 };
