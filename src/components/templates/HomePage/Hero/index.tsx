@@ -12,13 +12,13 @@ const HeroHomePage: FC = () => {
     <section
       className={clsx(
         'flex flex-col lg:flex-row lg:justify-start justify-center items-center',
-        'h-screen overflow-hidden',
+        'h-screen overflow-hidden relative',
       )}
     >
       <div
         className={clsx(
           'flex flex-col justify-center',
-          'px-10 md:px-20 lg:px-36',
+          'px-10 md:-ml-32  lg:ml-0 lg:px-36',
         )}
       >
         <h1

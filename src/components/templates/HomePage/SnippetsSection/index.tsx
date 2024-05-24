@@ -37,7 +37,7 @@ const dummyCardData = [
 
 const SnippetsSection: FC = () => {
   return (
-    <section className='layout mb-20'>
+    <section className='layout mb-20 mt-20'>
       <PostTitle
         title='Feature Snippets'
         description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatum odit, alias dignissimos soluta delectus?'

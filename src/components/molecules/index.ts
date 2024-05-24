@@ -6,8 +6,10 @@ import SkillIcon from './SkilIcon';
 import TabsBody from './TabsBody';
 import TabsHead from './TabsHead';
 import TOC from './TOC';
+import ButtonLink from '../atoms/links/ButtonLink';
 
 export {
+  ButtonLink,
   FeedbackFish,
   IconList,
   LikeView,
