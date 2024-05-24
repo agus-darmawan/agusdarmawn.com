@@ -1,3 +1,4 @@
+import BlogCard from './card/BlogCard';
 import SnippetCard from './card/SnippetCard';
 import ClientTOC from './ClientTOC';
 import Footer from './Footer';
@@ -10,6 +11,7 @@ import Code from './Pre';
 import Tabs from './Tabs';
 
 export {
+  BlogCard,
   ClientTOC,
   Code,
   Footer,
