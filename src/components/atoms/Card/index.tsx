@@ -14,6 +14,7 @@ const Card: FC<ComponentPropsWithoutRef<'a'>> = ({
       {...rest}
       className={cn(
         className,
+        'no-underline hover:no-underline',
         'overflow-hidden dark:bg-gray-700 border border-gray-700',
         'scale-[99%] hover:scale-100 transition-transform duration-200',
       )}

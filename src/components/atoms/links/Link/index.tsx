@@ -14,10 +14,14 @@ const Link: FC<LinkProps> = ({
   underline,
   ...rest
 }) => {
-  const linkClassName = cn('no-underline', className, {
-    'underline underline-offset-4 decoration-violet-500 decoration-dotted hover:decoration-solid transition-transform duration-1000':
-      underline,
-  });
+  const linkClassName = cn(
+    'no-underline hover:underline decoration-violet-500 underline-gap-4',
+    className,
+    {
+      'underline underline-offset-4 decoration-violet-500 decoration-dotted hover:decoration-solid transition-transform duration-1000':
+        underline,
+    },
+  );
 
   return (
     <NextLink href={String(href)} passHref className={linkClassName} {...rest}>
