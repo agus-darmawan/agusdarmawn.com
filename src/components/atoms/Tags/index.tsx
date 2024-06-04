@@ -10,7 +10,7 @@ const Tag: FC<TagProps> = ({ labels }) => {
       {labels.map((label, index) => (
         <button
           key={index}
-          className='px-2 rounded-xl bg-slate-900/50 text-white md:text-sm text-xs font-light'
+          className='px-2 py-0.5 rounded-xl bg-slate-900/50 text-white md:text-sm text-xs font-light'
         >
           {label}
         </button>

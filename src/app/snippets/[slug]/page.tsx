@@ -51,7 +51,7 @@ export default async function SnippetsPostPage({ params: { slug } }: Props) {
         </aside>
       </section>
       <p className='mt-10 mb-20'>
-        <Link href='/projects' underline>
+        <Link href='/snippets' underline>
           ← Back to Snippets
         </Link>
       </p>
