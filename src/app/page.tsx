@@ -1,17 +1,5 @@
-import {
-  BlogsSection,
-  HeroHomePage,
-  ProjectsSection,
-  SnippetsSection,
-} from '@/components';
+import { redirect } from 'next/navigation';
 
-export default function HomePage() {
-  return (
-    <main>
-      <HeroHomePage />
-      <ProjectsSection />
-      <BlogsSection />
-      <SnippetsSection />
-    </main>
-  );
+export default function RootPage() {
+  redirect('/en');
 }

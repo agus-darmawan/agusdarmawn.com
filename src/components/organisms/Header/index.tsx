@@ -1,5 +1,6 @@
 'use client';
 import clsx from 'clsx';
+import { useLocale } from 'next-intl';
 import { FC, useState } from 'react';
 
 import useScroll from '@/hooks/useScrool';
@@ -11,6 +12,7 @@ import { navlinks } from './links';
 const Header: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollPercentage: number = useScroll();
+  const locale = useLocale();
 
   return (
     <header
@@ -37,12 +39,22 @@ const Header: FC = () => {
         />
         <ul className='hidden md:flex flex-row gap-10'>
           {navlinks.map((value, index) => (
-            <NavLinks key={index} label={value.label} href={value.href} />
+            <NavLinks
+              key={index}
+              label={value.label}
+              href={`/${locale}${value.href}`}
+            />
           ))}
         </ul>
         <ThemeButton />
       </nav>
-      <MobileNavbar isOpen={isOpen} links={navlinks} />
+      <MobileNavbar
+        isOpen={isOpen}
+        links={navlinks.map((link) => ({
+          ...link,
+          href: `/${locale}${link.href}`,
+        }))}
+      />
     </header>
   );
 };
