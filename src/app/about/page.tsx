@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 import { AboutMe, Gallery, ListExperience, SkillsTabs } from '@/components';
+import ContactSection from '@/components/templates/AboutPage/Contact';
 
 import data from './data.json';
 
@@ -16,6 +17,7 @@ export default function AboutPage() {
       <SkillsTabs />
       <ListExperience />
       <Gallery />
+      <ContactSection />
     </main>
   );
 }
